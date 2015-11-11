@@ -1,0 +1,13 @@
+<template name="bikes">
+	<h2>Bikes for sale</h2>
+
+	<ul>
+		{{#each list}}
+			<li class="BikeItem {{selectedClass}}">{{name}}</li>
+		{{/each}}
+	</ul>
+
+	<form class="bike-add">
+		<input type="text" name="text" placeholder="Add a bike" />
+	</form>
+</template>

@@ -1,0 +1,17 @@
+<template name="navigation">
+<div id='cssmenu'>
+<ul>
+   <li class='{{isHome}}'><a href='{{pathFor route='home'}}'><span>Home</span></a></li>
+   <li class='{{isBooks}}'><a href='{{pathFor route='books'}}'><span>Books</span></a></li>
+   <li class='{{isBikes}}'><a href='{{pathFor route='bikes'}}'><span>Bikes</span></a></li>
+   <li class='{{isAbout}}'><a href='{{pathFor route='about'}}'><span>About</span></a></li>
+   {{#if currentUser}}
+   <li><a href='#' class='logout'><span>Logout</span></a></li>
+   {{else}}
+   <li class='{{isLogin}}'><a href='{{pathFor route='login'}}'><span>Login</span></a></li>
+   <li class='{{isRegister}}'><a href='{{pathFor route='register'}}'><span>Register</span></a></li>
+   {{/if}}
+</ul>
+</div>
+{{> yield}}
+</template>

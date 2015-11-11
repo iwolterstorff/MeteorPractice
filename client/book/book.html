@@ -1,0 +1,28 @@
+<template name="book">
+	<h1>Books for sale</h1>
+	<!-- <ul>
+		{{#each list}}
+			<li class="BookItem {{selectedClass}}">{{name}}  ||  Owner: {{createdBy}}</li>
+		{{/each}}
+	</ul> -->
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Seller</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each list}}
+				<tr>
+					<td>{{name}}</td>
+					<td>{{createdBy}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+
+	<form class="book-add">
+		<input type="text" name="text" placeholder="Add a book" />
+	</form>
+</template>
